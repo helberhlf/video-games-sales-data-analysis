@@ -26,7 +26,7 @@ import joypy
 changed during the program's execution."""
 
 # Using Global Constants Defining Named Constants
-HEIGHT = 700
+HEIGHT = 750
 WIDTH = 950
 TITLE_FONT={'size':22, 'family': 'Serif',}
 TITLE_X=0.5
@@ -548,7 +548,7 @@ def plot_joy(df, categorical,title, *args):
                                xlabels=True,
                                figsize=(16,16))
     # Decoration
-    plt.title(title, fontsize=26)
+    plt.title(title, fontsize=22)
     plt.xlabel('Total sales by platform (in millions)',fontsize =16)
     plt.xticks(rotation=45)
     return plt.show()
