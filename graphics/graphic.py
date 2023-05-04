@@ -28,7 +28,7 @@ changed during the program's execution."""
 # Using Global Constants Defining Named Constants
 HEIGHT = 700
 WIDTH = 950
-TITLE_FONT={'size':22, 'family': 'Serif',}
+TITLE_FONT={'size':20, 'family': 'Times New Roman',}
 TITLE_X=0.5
 FONT_COLOR = "#000000"
 #-------------------------------------------------------
@@ -148,7 +148,7 @@ def plot_3D_pca(
                     )
                     for i, feature in enumerate(features)]
             ),
-        title = '<b>Total explained variance PC1 + PC2 + PC3: {}%</b>'.format(round(pca.explained_variance_ratio_[0:3].cumsum()[-1], 2)),
+        title = '<b>Total explained variance PC1 + PC2 + PC3: {}%</b>'.format(round(pca.explained_variance_ratio_[0:3].cumsum()[-1]*100, 2)),
         title_x=TITLE_X,
         title_font=TITLE_FONT,
         font_color=FONT_COLOR,
@@ -648,7 +648,6 @@ def plot_pie(df, categorical1, categorica2, numeric, title,title_pie1, title_pie
 
 """
 References
-
 https://plotly.com/python/
 https://community.plotly.com/t/set-pca-loadings-aka-arrows-in-a-3d-scatter-plot/72905
 https://www.kaggle.com/code/desalegngeb/plotly-guide-customize-for-better-visualizations
