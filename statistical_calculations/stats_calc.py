@@ -190,17 +190,17 @@ def shapiro_test(df):
         # Nested conditional decision structure to test test significance level
         if p_value <= 0.001:
             CONCLUSION = 'Null Hypothesis is rejected.'
-            print('H1 is accepted at a 99.9% confidence level.')
+            print(f'H1 is accepted at a 99.9% confidence level-> {CONCLUSION}')
         elif p_value <= 0.01:
             CONCLUSION = 'Null Hypothesis is rejected.'
-            print('H1 is accepted at a 99% confidence level.')
+            print(f'H1 is accepted at a 99% confidence level-> {CONCLUSION}')
         elif p_value <= 0.05:
             CONCLUSION = 'Null Hypothesis is rejected.'
-            print('H1 is accepted at a 99.9% confidence level.')
+            print(f'H1 is accepted at a 95% confidence level within the limit-> {CONCLUSION}')
         else:
-            CONCLUSION
+            print("Failed to reject the null hypothesis -> The sample apparently follows a normal distribution.")
 
-        print(f'SW-statistic: {sw}\t p-value: {p_value:,.4f}\t{CONCLUSION}')
+        print(f'SW-statistic: {sw}\t p-value: {p_value:,.4f}\n')
         print('-' * 100)
 #-------------------------------------------------------
 
